@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { fetchMovie } from '../../fetchAPI';
-import { MovieListStyled, MovieListItem } from './MovieList.styled';
+import { MovieListStyled, MovieListItem, MovieName } from './MovieList.styled';
 
 export const MovieList = ({ movies }) => {
   console.log(movies);
@@ -13,6 +13,7 @@ export const MovieList = ({ movies }) => {
         // console.log(movie);
         return (
           <MovieListItem key={movie.id}>
+            <MovieName>{movie.title}</MovieName>
             <Link to={`/movies/${movie.id}`} state={{ from: location }}>
               <img
                 src={`${fetchMovie.BASE_URL}${movie.poster_path}`}
