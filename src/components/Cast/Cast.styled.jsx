@@ -48,4 +48,4 @@ export const ActorDataWrapper = styled.div`
   gap: 6px;
 `;
 
-export const FilmHero = styled.span``;
+export const NoCastText = styled.p``;

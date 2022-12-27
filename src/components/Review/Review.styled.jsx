@@ -31,4 +31,5 @@ export const Content = styled.p`
 export const NoReviewsText = styled.p`
   margin-top: 24px;
   margin-bottom: 24px;
+  text-align: center;
 `;
