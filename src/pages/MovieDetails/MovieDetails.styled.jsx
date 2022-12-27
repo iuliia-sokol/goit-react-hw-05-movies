@@ -9,11 +9,12 @@ export const WrapperMovie = styled.div`
   display: flex;
   gap: 20px;
   font-weight: 500;
+  padding: 36px;
 `;
 
 export const MovieDataWrapper = styled.div`
   padding: 24px;
-  font-size: 12px;
+  font-size: 16px;
 `;
 
 export const MoviePic = styled.img`
@@ -29,11 +30,12 @@ export const MovieList = styled.ul`
   list-style: none;
   gap: 40px;
   margin: 0;
-  padding: 0;
+  padding-left: 0;
 `;
 
 export const MovieInfo = styled.div`
   height: auto;
+  padding: 0 36px;
   margin-top: 30px;
   padding-bottom: 30px;
   border-bottom: 1px solid black;

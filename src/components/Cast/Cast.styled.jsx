@@ -23,8 +23,8 @@ export const CastItem = styled.li`
   gap: 18px;
   justify-content: space-between;
   text-align: space-between;
-  font-size: 8px;
-  height: 150px;
+  font-size: 14px;
+  height: 200px;
   font-weight: 700;
 `;
 
@@ -35,9 +35,12 @@ export const ActorImg = styled.img`
 `;
 
 export const ActorImgWrapper = styled.div`
-  flex-grow: 1;
   width: 100%;
   max-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 `;
 
 export const ActorDataWrapper = styled.div`
