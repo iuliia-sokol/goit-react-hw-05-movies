@@ -24,7 +24,6 @@ export const App = () => {
           <Route path="cast" element={<Cast />} />
           <Route path="review" element={<Review />} />
         </Route>
-        {/* <Route path="*" element={<Error404 />} /> */}
       </Route>
     </Routes>
   );

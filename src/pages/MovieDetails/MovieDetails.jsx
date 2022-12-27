@@ -3,6 +3,7 @@ import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { fetchMovie } from '../../fetchAPI';
 import { Loader } from '../../components/Loader/Loader';
 import {
+  GoBackLinkWrapper,
   WrapperMovie,
   MovieDataWrapper,
   MovieList,
@@ -15,14 +16,11 @@ import {
 } from './MovieDetails.styled';
 import { Link } from '../StartPage/StartPage.styled';
 
-// import { BackLink } from 'components/BackLink/BackLink';
-
 const MovieDetails = () => {
   const { id } = useParams();
 
   const [movieId, setMovieId] = useState(null);
   const location = useLocation();
-  //   const backLinkHref = location.state?.from ?? '/';
 
   useEffect(() => {
     fetchMovie.getMovieById(id).then(setMovieId);
@@ -44,8 +42,10 @@ const MovieDetails = () => {
   } = movieId;
 
   return (
-    <div>
-      {/* <BackLink to={backLinkHref}>Go back</BackLink> */}
+    <>
+      <GoBackLinkWrapper>
+        <Link to={location.state?.from ?? '/'}>Go back</Link>
+      </GoBackLinkWrapper>
       <WrapperMovie>
         <MoviePic
           src={`${fetchMovie.BASE_URL}${poster_path}`}
@@ -90,7 +90,7 @@ const MovieDetails = () => {
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
-    </div>
+    </>
   );
 };
 

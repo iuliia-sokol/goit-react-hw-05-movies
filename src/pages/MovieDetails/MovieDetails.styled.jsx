@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const GoBackLinkWrapper = styled.div`
+  padding: 0 24px;
+  margin-bottom: 36px;
+`;
+
 export const WrapperMovie = styled.div`
   display: flex;
   gap: 20px;

@@ -4,8 +4,8 @@ import { useSearchParams } from 'react-router-dom';
 import { fetchMovie } from '../../fetchAPI';
 import { SearchForm } from '../../components/SearchForm/SearchForm';
 import { MovieList } from '../../components/MovieList/MovieList';
-import { MovieMain } from './Movies.styled';
 import { Btn } from '../../components/Button/Button';
+import { MovieMain } from './Movies.styled';
 
 const Movies = () => {
   const [movies, setMovies] = useState([]);
