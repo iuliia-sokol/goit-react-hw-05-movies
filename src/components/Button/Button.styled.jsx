@@ -6,20 +6,40 @@ export const BtnElement = styled.button`
   align-items: center;
   border-radius: 8px;
   padding: 12px 16px;
-  border: none;
   font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0px 12px 8px 4px #cab1b14d;
+
+  border: ${props =>
+    props.status === 'search'
+      ? 'none'
+      : props.status === 'load'
+      ? '1px solid rgba(0, 128, 75, 0.7)'
+      : 'grey'};
+
   background-color: ${props =>
     props.status === 'search'
-      ? 'transparent'
+      ? 'rgba(0, 128, 75, 0.7)'
       : props.status === 'load'
-      ? 'hsla(248, 39%, 39%, 1)'
+      ? 'transparent'
       : 'grey'};
-  color: hsla(0, 0%, 100%, 1);
+
+  color: ${props =>
+    props.status === 'search'
+      ? 'hsla(0, 0%, 100%, 1)'
+      : props.status === 'load'
+      ? 'black'
+      : 'grey'};
+
   transform: scale(1);
 
   &:hover,
   &:focus {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    color: white;
+    background-color: rgba(0, 128, 75, 0.7);
+    border: none;
+    box-shadow: 0px 12px 8px 4px #0b78474d;
   }
 
   & > svg {
