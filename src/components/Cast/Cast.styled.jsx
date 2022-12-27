@@ -11,6 +11,7 @@ export const CastList = styled.ul`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 9px;
   padding: 0;
 `;
