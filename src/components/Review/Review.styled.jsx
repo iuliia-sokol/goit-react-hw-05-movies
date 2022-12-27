@@ -7,7 +7,6 @@ export const ReviewsList = styled.ul`
   flex-wrap: wrap;
   gap: 20px;
   padding: 36px;
-  font-size: 12px;
 `;
 
 export const ReviewItem = styled.li`
@@ -18,12 +17,12 @@ export const ReviewItem = styled.li`
 export const Author = styled.p`
   color: #3939d7;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   font-style: italic;
 `;
 
 export const Content = styled.p`
-  font-size: 12px;
+  font-size: 16px;
   text-indent: 5%;
   text-align: justify;
 `;
