@@ -1,18 +1,22 @@
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
 
 export const WrapperMovie = styled.div`
   display: flex;
   gap: 20px;
   font-weight: 500;
-  h1,
-  h3 {
-    color: orangered;
-  }
-  img {
-    border: 1px solid black;
-    border-radius: 2px;
-  }
+`;
+
+export const MovieDataWrapper = styled.div`
+  padding: 24px;
+  font-size: 12px;
+`;
+
+export const MoviePic = styled.img`
+  border-radius: 24px;
+`;
+
+export const OverviewContent = styled.p`
+  text-align: justify;
 `;
 
 export const MovieList = styled.ul`
@@ -22,23 +26,6 @@ export const MovieList = styled.ul`
   margin: 0;
   padding: 0;
 `;
-export const MovieLink = styled(NavLink)`
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-  border: 1px solid grey;
-  &.active {
-    color: white;
-    background-color: orangered;
-    border: none;
-  }
-  :hover:not(.active),
-  :focus-visible:not(.active) {
-    color: orangered;
-  }
-`;
 
 export const MovieInfo = styled.div`
   height: auto;
@@ -47,7 +34,24 @@ export const MovieInfo = styled.div`
   border-bottom: 1px solid black;
   border-top: 1px solid black;
 `;
-export const MovieInfoTitle = styled.h4`
-  margin-bottom: 30px;
-  color: orangered;
+
+export const Genres = styled.ul`
+  display: flex;
+`;
+
+export const Title = styled.h2`
+  text-transform: uppercase;
+  letter-spacing: 1.7;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600px;
+`;
+
+export const SubTitle = styled.h3`
+  text-transform: uppercase;
+  letter-spacing: 1.7;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500px;
 `;

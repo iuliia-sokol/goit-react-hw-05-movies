@@ -3,11 +3,16 @@ import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { fetchMovie } from '../../fetchAPI';
 import {
   WrapperMovie,
+  MovieDataWrapper,
   MovieList,
-  MovieLink,
   MovieInfo,
-  MovieInfoTitle,
+  MoviePic,
+  OverviewContent,
+  Genres,
+  Title,
+  SubTitle,
 } from './MovieDetails.styled';
+import { Link } from '../StartPage/StartPage.styled';
 
 // import { BackLink } from 'components/BackLink/BackLink';
 
@@ -41,41 +46,43 @@ export const MovieDetails = () => {
     <div>
       {/* <BackLink to={backLinkHref}>Go back</BackLink> */}
       <WrapperMovie>
-        <img
+        <MoviePic
           src={`${fetchMovie.BASE_URL}${poster_path}`}
           alt={original_title}
           width="300"
         />
-        <div>
-          <h1>
+        <MovieDataWrapper>
+          <Title>
             {original_title || original_name} (
             <span>{parseInt(release_date || first_air_date)}</span>)
-          </h1>
-          <p>User Score: {`${Math.round(vote_average * 10)}%`}</p>
-          <h3>Overview</h3>
-          <p>{overview}</p>
-          <h3>Genres</h3>
-          <p>
+          </Title>
+          <OverviewContent>
+            User Score: {`${Math.round(vote_average * 10)}%`}
+          </OverviewContent>
+          <SubTitle>Overview</SubTitle>
+          <OverviewContent>{overview}</OverviewContent>
+          <SubTitle>Genres</SubTitle>
+          <Genres>
             {genres.map((genre, index) => (
-              <span key={index} style={{ marginRight: '10px' }}>
-                {genre.name} /
-              </span>
+              <li key={index} style={{ marginRight: '10px' }}>
+                {genre.name}
+              </li>
             ))}
-          </p>
-        </div>
+          </Genres>
+        </MovieDataWrapper>
       </WrapperMovie>
       <MovieInfo>
-        <MovieInfoTitle>Additional Information</MovieInfoTitle>
+        <SubTitle>Additional Information</SubTitle>
         <MovieList>
           <li>
-            <MovieLink to="cast" state={location.state}>
+            <Link to="cast" state={location.state}>
               Cast
-            </MovieLink>{' '}
+            </Link>{' '}
           </li>
           <li>
-            <MovieLink to="review" state={location.state}>
+            <Link to="review" state={location.state}>
               Reviews
-            </MovieLink>{' '}
+            </Link>{' '}
           </li>
         </MovieList>
       </MovieInfo>
