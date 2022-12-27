@@ -25,7 +25,7 @@ export const CastItem = styled.li`
   justify-content: space-between;
   text-align: space-between;
   font-size: 14px;
-  height: 200px;
+  min-height: 200px;
   font-weight: 700;
 `;
 
