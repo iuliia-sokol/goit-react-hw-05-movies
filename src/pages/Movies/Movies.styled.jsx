@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const MovieMain = styled.main`
-  padding-top: 20px;
-  padding-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 `;

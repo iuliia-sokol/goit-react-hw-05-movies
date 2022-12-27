@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  padding-top: 20px;
-  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 `;
 
 export const Title = styled.h1`

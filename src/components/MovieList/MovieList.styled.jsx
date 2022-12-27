@@ -1,22 +1,25 @@
 import styled from 'styled-components';
 
 export const MovieListStyled = styled.ul`
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  justify-content: space-between;
+  gap: 16px;
   margin: 0 auto;
-  padding: 0;
-  justify-content: center;
+  padding: 24px;
+`;
+
+export const MovieListItem = styled.li`
+  flex-basis: calc((100%-80px) / 6);
+  transform: scale(1);
+  border-radius: 12px;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
   img {
-    border-radius: 5px;
-  }
-
-  li {
-    transition: box-shadow 250ms linear, transform 250ms linear;
-  }
-
-  li:hover {
-    box-shadow: 0px 2px 24px -5px rgba(0, 0, 0, 0.74);
-    transform: scale(1.02);
+    border-radius: 12px;
   }
 `;

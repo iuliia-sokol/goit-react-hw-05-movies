@@ -27,3 +27,8 @@ export const Content = styled.p`
   text-indent: 5%;
   text-align: justify;
 `;
+
+export const NoReviewsText = styled.p`
+  margin-top: 24px;
+  margin-bottom: 24px;
+`;

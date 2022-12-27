@@ -1,8 +1,15 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import { ImSad } from 'react-icons/im';
 
 import { fetchMovie } from '../../fetchAPI';
-import { ReviewsList, ReviewItem, Author, Content } from './Review.styled';
+import {
+  ReviewsList,
+  ReviewItem,
+  Author,
+  Content,
+  NoReviewsText,
+} from './Review.styled';
 
 export const Review = () => {
   const { id } = useParams();
@@ -29,7 +36,10 @@ export const Review = () => {
           ))}
         </ReviewsList>
       ) : (
-        <p> We don't have any reviews for this movie</p>
+        <NoReviewsText>
+          {' '}
+          We don't have any reviews for this movie <ImSad />
+        </NoReviewsText>
       )}
     </div>
   );

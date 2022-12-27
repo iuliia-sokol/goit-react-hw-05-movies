@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { fetchMovie } from '../../fetchAPI';
-import { MovieListStyled } from './MovieList.styled';
+import { MovieListStyled, MovieListItem } from './MovieList.styled';
 
 export const MovieList = ({ movies }) => {
   console.log(movies);
@@ -12,7 +12,7 @@ export const MovieList = ({ movies }) => {
       {movies.map(movie => {
         // console.log(movie);
         return (
-          <li key={movie.id}>
+          <MovieListItem key={movie.id}>
             <Link to={`/movies/${movie.id}`} state={{ from: location }}>
               <img
                 src={`${fetchMovie.BASE_URL}${movie.poster_path}`}
@@ -20,7 +20,7 @@ export const MovieList = ({ movies }) => {
                 width="200"
               />
             </Link>
-          </li>
+          </MovieListItem>
         );
       })}
     </MovieListStyled>
