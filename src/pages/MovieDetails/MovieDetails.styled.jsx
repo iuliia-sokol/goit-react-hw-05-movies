@@ -13,8 +13,8 @@ export const WrapperMovie = styled.div`
 `;
 
 export const MovieDataWrapper = styled.div`
-  padding: 24px;
-  font-size: 16px;
+  padding: 0 24px;
+  font-size: 18px;
 `;
 
 export const MoviePic = styled.img`
@@ -44,14 +44,17 @@ export const MovieInfo = styled.div`
 
 export const Genres = styled.ul`
   display: flex;
+  margin-left: 0;
+  padding-left: 0;
 `;
 
 export const Title = styled.h2`
   text-transform: uppercase;
   letter-spacing: 1.7;
   margin-bottom: 20px;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600px;
+  margin-top: 0;
 `;
 
 export const SubTitle = styled.h3`
@@ -59,6 +62,6 @@ export const SubTitle = styled.h3`
   letter-spacing: 1.7;
   margin-bottom: 20px;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500px;
 `;

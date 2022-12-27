@@ -11,6 +11,7 @@ export const ReviewsList = styled.ul`
 
 export const ReviewItem = styled.li`
   display: flex;
+  flex-direction: column;
   justify-content: stretch;
   gap: 36px;
 `;
@@ -19,6 +20,8 @@ export const Author = styled.p`
   font-weight: 600;
   font-size: 18px;
   font-style: italic;
+  /* display: flex;
+  width: max-content; */
 `;
 
 export const Content = styled.p`
