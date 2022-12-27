@@ -1,6 +1,7 @@
 import { useState, useEffect, Suspense } from 'react';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import { fetchMovie } from '../../fetchAPI';
+import { Loader } from '../../components/Loader/Loader';
 import {
   WrapperMovie,
   MovieDataWrapper,
@@ -16,7 +17,7 @@ import { Link } from '../StartPage/StartPage.styled';
 
 // import { BackLink } from 'components/BackLink/BackLink';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { id } = useParams();
 
   const [movieId, setMovieId] = useState(null);
@@ -86,9 +87,11 @@ export const MovieDetails = () => {
           </li>
         </MovieList>
       </MovieInfo>
-      <Suspense fallback={<div>Loading page...</div>}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </div>
   );
 };
+
+export default MovieDetails;

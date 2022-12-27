@@ -19,7 +19,7 @@ export class ThemoviedbAPI {
     });
 
     const { data } = await axios.get('trending/movie/day', { params });
-    console.log(data);
+    // console.log(data);
     return data;
   }
 

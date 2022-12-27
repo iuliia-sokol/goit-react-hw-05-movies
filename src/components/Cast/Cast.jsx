@@ -11,7 +11,7 @@ import {
   FilmHero,
 } from './Cast.styled';
 
-export const Cast = () => {
+const Cast = () => {
   const { id } = useParams();
   const [castList, setCastList] = useState();
 
@@ -50,3 +50,5 @@ export const Cast = () => {
     </CastConteiner>
   );
 };
+
+export default Cast;

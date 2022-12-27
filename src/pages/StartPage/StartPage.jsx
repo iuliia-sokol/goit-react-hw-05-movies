@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Container, Header, Link } from './StartPage.styled';
+import { Loader } from '../../components/Loader/Loader';
 
 export const StartPage = () => {
   return (
@@ -13,7 +14,7 @@ export const StartPage = () => {
           <Link to="/movies">Movies</Link>
         </nav>
       </Header>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </Container>

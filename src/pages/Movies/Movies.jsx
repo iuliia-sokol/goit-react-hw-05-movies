@@ -7,7 +7,7 @@ import { MovieList } from '../../components/MovieList/MovieList';
 import { MovieMain } from './Movies.styled';
 import { Btn } from '../../components/Button/Button';
 
-export const Movies = () => {
+const Movies = () => {
   const [movies, setMovies] = useState([]);
 
   const [page, setPage] = useState(1);
@@ -52,3 +52,5 @@ export const Movies = () => {
     </MovieMain>
   );
 };
+
+export default Movies;

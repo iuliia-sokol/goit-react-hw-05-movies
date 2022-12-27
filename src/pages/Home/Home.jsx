@@ -4,14 +4,14 @@ import { MovieList } from '../../components/MovieList/MovieList';
 import { fetchMovie } from '../../fetchAPI';
 import { Btn } from '../../components/Button/Button';
 
-export const Home = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
 
   const [page, setPage] = useState(1);
 
   const [total_results, setTotalResults] = useState(null);
 
-  console.log(total_results);
+  // console.log(total_results);
 
   useEffect(() => {
     fetchMovie.getPopularMovies(page).then(data => {
@@ -34,3 +34,5 @@ export const Home = () => {
     </Main>
   );
 };
+
+export default Home;
