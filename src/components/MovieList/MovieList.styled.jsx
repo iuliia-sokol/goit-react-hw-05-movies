@@ -11,7 +11,7 @@ export const MovieListStyled = styled.ul`
 `;
 
 export const MovieListItem = styled.li`
-  flex-basis: calc((100%-80px) / 6);
+  width: calc((100%-80px) / 6);
   transform: scale(1);
   border-radius: 12px;
 
@@ -25,6 +25,7 @@ export const MovieListItem = styled.li`
 
   img {
     border-radius: 12px;
+    height: 100%;
   }
 `;
 
