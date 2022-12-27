@@ -10,10 +10,12 @@ export const MovieList = ({ movies }) => {
   return (
     <MovieListStyled>
       {movies.map(movie => {
-        // console.log(movie);
+        console.log(movie);
         return (
           <MovieListItem key={movie.id}>
-            <MovieName>{movie.title}</MovieName>
+            <MovieName>
+              {movie.title} <span>{movie.vote_average.toFixed(2)}</span>
+            </MovieName>
             <Link to={`/movies/${movie.id}`} state={{ from: location }}>
               <img
                 src={`${fetchMovie.BASE_URL}${movie.poster_path}`}

@@ -34,9 +34,10 @@ export const MovieName = styled.p`
   left: 0;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(16, 178, 108, 0.657);
+  background-color: rgba(16, 178, 108, 0.7);
   border-radius: 12px;
   font-size: 10px;
   color: white;
@@ -44,4 +45,15 @@ export const MovieName = styled.p`
   padding: 12px;
   height: 30%;
   opacity: 0;
+
+  & > span {
+    position: absolute;
+    bottom: -50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    background-color: rgba(228, 222, 30, 0.8);
+    padding: 10px;
+    border-radius: 12px;
+  }
 `;
