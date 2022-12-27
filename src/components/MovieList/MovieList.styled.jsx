@@ -26,6 +26,7 @@ export const MovieListItem = styled.li`
   img {
     border-radius: 12px;
     height: 100%;
+    width: 100%;
   }
 `;
 
@@ -40,7 +41,7 @@ export const MovieName = styled.p`
   align-items: center;
   background-color: rgba(16, 178, 108, 0.7);
   border-radius: 12px;
-  font-size: 10px;
+  font-size: 16px;
   color: white;
   font-weight: 500;
   padding: 12px;
@@ -49,10 +50,10 @@ export const MovieName = styled.p`
 
   & > span {
     position: absolute;
-    bottom: -50%;
+    bottom: 0;
     right: 0;
-    transform: translateY(-50%);
-    width: 40px;
+    /* transform: translateY(-50%); */
+    width: 50px;
     background-color: rgba(228, 222, 30, 0.8);
     padding: 10px;
     border-radius: 12px;

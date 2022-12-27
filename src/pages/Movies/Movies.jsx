@@ -46,7 +46,7 @@ const Movies = () => {
     <MovieMain>
       <SearchForm onSubmit={formSubmit} />
       {query && <MovieList movies={movies} />}
-      {total_results / 12 >= page && (
+      {total_results / 20 >= page && (
         <Btn text="Load more" status="load" onClick={loadMore} />
       )}
     </MovieMain>
