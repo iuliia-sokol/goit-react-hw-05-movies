@@ -6,7 +6,7 @@ export const ReviewsList = styled.ul`
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 20px;
+  padding: 36px;
   font-size: 12px;
 `;
 
@@ -24,4 +24,6 @@ export const Author = styled.p`
 
 export const Content = styled.p`
   font-size: 12px;
+  text-indent: 5%;
+  text-align: justify;
 `;

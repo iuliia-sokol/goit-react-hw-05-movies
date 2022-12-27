@@ -5,7 +5,9 @@ import {
   CastList,
   CastConteiner,
   CastItem,
-  CastImg,
+  ActorImg,
+  ActorImgWrapper,
+  ActorDataWrapper,
   FilmHero,
 } from './Cast.styled';
 
@@ -26,21 +28,22 @@ export const Cast = () => {
       <CastList>
         {castList.map(el => (
           <CastItem key={el.id}>
-            <CastImg
-              src={
-                el.profile_path
-                  ? `${fetchMovie.BASE_URL}${el.profile_path}`
-                  : fetchMovie.defaultImg
-              }
-              alt={el.name}
-              width="100"
-            />
-            <div>
+            <ActorImgWrapper>
+              <ActorImg
+                src={
+                  el.profile_path
+                    ? `${fetchMovie.BASE_URL}${el.profile_path}`
+                    : fetchMovie.defaultImg
+                }
+                alt={el.name}
+              />
+            </ActorImgWrapper>
+            <ActorDataWrapper>
               <p>{el.name}</p>
               <p>
                 Character: <FilmHero>{el.character}</FilmHero>
               </p>
-            </div>
+            </ActorDataWrapper>
           </CastItem>
         ))}
       </CastList>
