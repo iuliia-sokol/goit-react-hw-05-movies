@@ -21,7 +21,7 @@ const MovieDetails = () => {
 
   const [movieId, setMovieId] = useState(null);
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   useEffect(() => {
     fetchMovie.getMovieById(id).then(setMovieId);
